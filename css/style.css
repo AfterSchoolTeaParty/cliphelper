@@ -1,0 +1,68 @@
+*{
+	font-family: 'Roboto', sans-serif;
+}
+
+.clear{
+	text-decoration: none;
+	list-style: none;
+	color: inherit;
+}
+
+.bg-darks{
+	background-color: black !important;
+}
+.blackBox{
+	height: 100px !important;
+	width: 100px !important;
+	background-color: black;
+}
+.whiteBox{
+	height: 100px !important;
+	width: 100px !important;
+	background-color: white;
+}
+.email{
+	height: 1.5rem;
+	width: 1.5rem; 
+}
+#home-btn{
+	height: 2rem;
+	width: 2rem;
+}
+.isTitle{
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+.styled-list{
+	list-style: square !important;
+}
+
+.example{
+	height: 100px;
+	width: 100px;
+	background-color: black;
+}
+.bg-saturday{
+	background-color: black;
+	font-family: 'Roboto Mono', monospace !important;
+}
+
+.bg-sunday{
+	background-color: white;
+}
+
+@media (min-width: 992px){
+	body{
+		min-height: 101vh;
+	}
+	.over-y-true{
+		overflow-y: scroll !important;
+	}
+}
+
+@media (max-width: 992px){
+	.tpad{
+		padding-top: 10px;
+	}
+}

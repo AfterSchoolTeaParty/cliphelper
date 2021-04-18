@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- LOGO -->
+  <link rel="icon" href="img/logo.png" type="image/icon type">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&family=Ubuntu+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cliphelper.css">
+
+  <title>Clip-Path Helper</title>
+</head>
+<body class="bg-sunday text-dark">
+  <!-- NAVBAR END -->
+  <!-- SOMETHING IN BOTTOM -->
+  <div class="row justify-content-center fixed-bottom bg-sunday pt-1" id="footer">
+    <div class="col-sm-1 d-flex justify-content-end">
+      <div class="home bg-dark home-btn" id="home-btn"></div>
+    </div>
+    <div class="col-sm-3">
+      <div sclass="input-group mb-3">
+        <input id='search-box' type="text" class="form-control search" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+      </div>  
+    </div>
+  </div>
+
+  <!-- CONTAINER START -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md d-flex">
+        <h1 class="display-4 ms-md-5 text-warning isTitle">Clip Helper</h1>
+      </div>
+      <div class="col-md-2">
+        <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="mode">
+        <label class="form-check-label" id='mode-text' for="mode">Dark Mode</label>
+        </div>
+      </div>
+    </div>
+    <hr class='mb-md-5'>
+    <div class="row postion-relative">
+      <div class="col-lg-3">
+        <ul class="list-group">
+          <li class="list-group-item"><a class="clear" href="#introduction">Introduction</a></li>
+          <li class="list-group-item"><a class="clear" href="#get-started">Get Started</a></li>
+          <li class="list-group-item"><a class="clear" href="#code">Reference</a>
+            <ul class="styled-list">
+              <li><a href="#rectangular" class="clear">Rectangular</a></li>
+              <li><a href="#polygonal" class="clear">Polygonal</a></li>
+              <li><a href="#diagonal" class="clear">Diagonal</a></li>
+              <li><a href="#x-shape" class="clear">X Shape</a></li>
+              <li><a href="#plus" class="clear">Plus</a></li>
+              <li><a href="#arrow" class="clear">Arrow</a></li>
+              <li><a href="#slash" class="clear">slash</a></li>
+              <li><a href="#pine" class="clear">Pine</a></li>
+              <li><a href="#puzzle" class="clear">Puzzle</a></li>
+              <li><a href="#pointer" class="clear">Pointer</a></li>
+              <li><a href="#hamburger" class="clear">Hamburger</a></li>
+              <li><a href="#message" class="clear">Message</a></li>
+              <li><a href="#koala" class="clear">Koala</a></li>
+              <li><a href="#star" class="clear">Star</a></li>
+              <li><a href="#home" class="clear">Home</a></li>
+              <li><a href="#window" class="clear">Window</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- CREDITS -->
+        <section id="credits" class="pt-5">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p class="h3">Creator:</p>
+              <div>
+                <p>Nakano Yoichi @2021</p>
+                <p>"I am new to this library thing if there's a mistake please let me know"</p>
+                <div class="row">
+                  <div class="col-md-1 me-1"><div class="blackbox bg-saturday email mail"></div></div>
+                  <div class="col-md-9">nakanoyoichi83@gmail.com</div>
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <p class="h3">Thanks to:</p>
+              <ul>
+                <li><a href='https://getbootstrap.com' class="clear">Bootstrap</a></li>
+                <li><a href='https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path' class="clear">Mozilla</a></li>
+                <li><a href='https://bennettfeely.com/clippy/' class="clear">Bennettfeely.com</a></li>
+                <li><a href='https://alextade.me/apps/css_shape2/library/index.html' class="clear">Alex Tade</a></li>
+                <li><a href='https://jquery.com/' class="clear">JQuery</a></li>
+              </ul>
+            </li>
+          </ul>
+        </section> 
+      </div>
+
+      <div id="content" class="col">
+
+        <!-- INTRODUCTION -->
+        <section id="introduction" class="tpad">
+          <h1 class="display-4">Introduction</h1>
+          <div class="container-fluid pt-2">
+            <h3>What is Clip Path?</h3>
+            <p><em>Based on Mozilla,</em>The clip-path CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.</p>
+          </div>
+
+            <hr>
+
+          <div class="container pt-2">
+            <h3>What is Clip Helper?</h3>
+            <p>Well the clip path sometimes quite hard to be created. So simply Clip Helper is a free CSS libarary that has 40 classes (for now) to help you with some clip path. I got some of the shape from other's (Don't forget to check the credits)</p>
+          </div>
+
+            <hr>
+            
+          <div class="container pt-2">
+            <h3 id="version">Version?</h3>
+            <p>The version of this library is 1.0</p>
+          </div>
+        </section>
+
+        <!-- GETTING STARTED -->
+        <section id="get-started" class="pt-5">
+          <h3 class="display-4">Get Started</h3>
+          <div class="container pt-2">
+            <h3 id="download">Download</h3>
+            <p>To get started you can download the library using the download button below</p>
+            <a href="package/cliphelper.rar" download="cliphelper.rar" class="btn btn-sunday btn-outline-warning">Download</a>
+          </div>
+
+          <hr>
+
+          <div class="container pt-2">
+            <h3>How to start?</h3>
+            <p>After downloading you are free to edit the css file or maybe if you are in a hurry, just include it and find the class you need in the reference or type the class you are looking for in the search box at the bottom of your screen and then hit the enter key</p>
+          </div>
+
+            <hr>
+          
+          <div class="container pt-2">
+            <h3 id="example">Example</h3>
+            <p>To give an element a clip-path just use the class name example:</p>
+            <div class="container-fluid bg-saturday">
+              <code id='code-diagonal' class='bg-saturday text-warning'>&ltdiv class="blackBox diagonal-1"&gt&lt/div&gt</code>
+            </div>
+            <p class="pt-1">That line of code will give this output</p>
+            <div class="blackBox diagonal-1"></div>
+            <p class="pt-1">Sometimes you will need to give a shape outside for the element. so when you give it a float, it will become like this</p>
+            <div class="row justify-content-center">
+              <div class="col">
+                <div class="blackBox diamond diamond-shaped float-start"></div>
+                <div><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, dignissimos. Rerum omnis repudiandae, quae provident delectus voluptate explicabo accusantium, molestiae autem fugiat consequuntur, eos id, illum debitis. Illum nulla alias voluptatum ea tempora hic iusto nam laudantium autem rerum cum quibusdam ab debitis vero earum est eos deserunt unde, mollitia!<p></div>
+              </div>
+            </div>
+            <p class="pt-1">Then you will need to add the class name with '-shaped' to the end of the class name. I'll give you an example</p>
+            <div class="container-fluid bg-saturday">
+              <code id='code-diagonal' class='bg-saturday text-warning'>&ltdiv class="blackBox diagonal-1 diagonal-1-shaped"&gt&lt/div&gt</code><br>
+              <code id='code-diagonal' class='bg-saturday text-warning'>&ltdiv class="blackBox diamond diamond-shaped"&gt&lt/div&gt</code><br>
+              <code id='code-diagonal' class='bg-saturday text-warning'>&ltdiv class="blackBox home home-shaped"&gt&lt/div&gt</code>
+            </div>
+          </div>
+
+            <hr>
+
+          <div class="container pt-2">
+            <h3>Warning!!!</h3>
+            <p>Becareful for some classes they would behave differently depends on the width and height for example the blackBox class is 100x100 px. I recommend not to use non-rectangular class for elements that do not have the same width and height</p>
+          </div>
+        </section>
+
+        <!-- SHOWING THE LIBRARY CODE -->
+        <section id="code" class="pt-5">
+          <h3 class="display-4">Reference Code</h3>
+          <ul class="container styled-list">
+
+            <li id="rectangular" class="mt-3 mb-3 to-search">
+              <h3>Rectangular</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 diamond"></div>
+                <div class="example ms-2 me-2 mt-2 parallelogram"></div>
+                <div class="example ms-2 me-2 mt-2 rev-parallelogram"></div>
+                <div class="example ms-2 me-2 mt-2 trapezoid-up"></div>
+                <div class="example ms-2 me-2 mt-2 trapezoid-right"></div>
+                <div class="example ms-2 me-2 mt-2 trapezoid-down"></div>
+                <div class="example ms-2 me-2 mt-2 trapezoid-left"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-diagonal' class='text-warning'>&ltdiv class="blackBox diamond"&gt&lt/div&gt<br>&ltdiv class="blackBox parallelogram"&gt&lt/div&gt<br>&ltdiv class="blackBox rev-parallelogram"&gt&lt/div&gt<br>&ltdiv class="blackBox trapezoid-up"&gt&lt/div&gt<br>&ltdiv class="blackBox trapezoid-right"&gt&lt/div&gt<br>&ltdiv class="blackBox trapezoid-down"&gt&lt/div&gt<br>&ltdiv class="blackBox trapezoid-left"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-diagonal')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="polygonal" class="mt-3 mb-3 to-search">
+              <h3>Polygonal</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 pentagon"></div>
+                <div class="example ms-2 me-2 mt-2 hexagon"></div>
+                <div class="example ms-2 me-2 mt-2 heptagon"></div>
+                <div class="example ms-2 me-2 mt-2 octagon"></div>
+                <div class="example ms-2 me-2 mt-2 nonagon"></div>
+                <div class="example ms-2 me-2 mt-2 decagon"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-polygon' class='text-warning'>&ltdiv class="blackBox pentagon"&gt&lt/div&gt<br>&ltdiv class="blackBox hexagon"&gt&lt/div&gt<br>&ltdiv class="blackBox heptagon"&gt&lt/div&gt<br>&ltdiv class="blackBox octagon"&gt&lt/div&gt<br>&ltdiv class="blackBox nonagon"&gt&lt/div&gt<br>&ltdiv class="blackBox decagon"&gt&lt/div&gt<br></code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-polygon')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="diagonal" class="mt-3 mb-3 to-search">
+              <h3>Diagonal</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 diagonal-1"></div>
+                <div class="example ms-2 me-2 mt-2 diagonal-2"></div>
+                <div class="example ms-2 me-2 mt-2 diagonal-3"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-diagonal' class='text-warning'>&ltdiv class="blackBox diagonal-1"&gt&lt/div&gt<br>&ltdiv class="blackBox diagonal-2"&gt&lt/div&gt<br>&ltdiv class="blackBox diagonal-3"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-diagonal')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="x-shape" class="mt-3 mb-3 to-search">
+              <h3>X Shape</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 x-in"></div>
+                <div class="example ms-2 me-2 mt-2 x-out"></div>
+                <div class="example ms-2 me-2 mt-2 thick-x-out"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-x-shape' class='text-warning'>&ltdiv class="blackBox x-in"&gt&lt/div&gt<br>&ltdiv class="blackBox x-out"&gt&lt/div&gt<br>&ltdiv class="blackBox thick-x-out"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-x-shape')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="plus" class="mt-3 mb-3 to-search">
+              <h3>Plus</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 plus"></div>
+                <div class="example ms-2 me-2 mt-2 thick-plus"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-plus' class='text-warning'>&ltdiv class="blackBox plus"&gt&lt/div&gt<br>&ltdiv class="blackBox thick-plus"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-plus')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="arrow" class="mt-3 mb-3 to-search">
+              <h3>Arrow</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 arrow-up"></div>
+                <div class="example ms-2 me-2 mt-2 arrow-right"></div>
+                <div class="example ms-2 me-2 mt-2 arrow-down"></div>
+                <div class="example ms-2 me-2 mt-2 arrow-left"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-arrow' class='text-warning'>&ltdiv class="blackBox arrow-up"&gt&lt/div&gt<br>&ltdiv class="blackBox arrow-right"&gt&lt/div&gt<br>&ltdiv class="blackBox arrow-down"&gt&lt/div&gt<br>&ltdiv class="blackBox arrow-left"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-arrow')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="slash" class="mt-3 mb-3 to-search">
+              <h3>Slash</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex flex-wrap border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 slash-1"></div>
+                <div class="example ms-2 me-2 mt-2 slash-2"></div>
+                <div class="example ms-2 me-2 mt-2 slash-3"></div>
+                <div class="example ms-2 me-2 mt-2 rev-slash-1"></div>
+                <div class="example ms-2 me-2 mt-2 rev-slash-2"></div>
+                <div class="example ms-2 me-2 mt-2 rev-slash-3"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-slash' class='text-warning'>&ltdiv class="blackBox slash-1"&gt&lt/div&gt<br>&ltdiv class="blackBox slash-2"&gt&lt/div&gt<br>&ltdiv class="blackBox slash-3"&gt&lt/div&gt<br>&ltdiv class="blackBox rev-slash-1"&gt&lt/div&gt<br>&ltdiv class="blackBox rev-slash-2"&gt&lt/div&gt<br>&ltdiv class="blackBox rev-slash-3"&gt&lt/div&gt<br></code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-slash')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="pine" class="mt-3 mb-3 to-search">
+              <h3>Pine</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 pine"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-pine' class='text-warning'>&ltdiv class="blackBox pine"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-pine')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="puzzle" class="mt-3 mb-3 to-search">
+              <h3>Puzzle</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 puzzle"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-puzzle' class='text-warning'>&ltdiv class="blackBox puzzle"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-puzzle')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="pointer" class="mt-3 mb-3 to-search">
+              <h3>Pointer</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 pointer"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-pointer' class='text-warning'>&ltdiv class="blackBox pointer"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-pointer')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="hamburger" class="mt-3 mb-3 to-search">
+              <h3>Hamburger</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 hamburger"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-hamburger' class='text-warning'>&ltdiv class="blackBox hamburger"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-hamburger')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="message" class="mt-3 mb-3 to-search">
+              <h3>Message</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 message"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-message' class='text-warning'>&ltdiv class="blackBox message"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-message')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="koala" class="mt-3 mb-3 to-search">
+              <h3>Koala</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 koala"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-koala' class='text-warning'>&ltdiv class="blackBox koala"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-koala')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <li id="star" class="mt-3 mb-3 to-search">
+              <h3>Star</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 star"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-star' class='text-warning'>&ltdiv class="blackBox star"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-star')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="mail" class="mt-3 mb-3 to-search">
+              <h3>Mail</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 mail"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-mail' class='text-warning'>&ltdiv class="blackBox mail"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-mail')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <hr>
+
+            <li id="home" class="mt-3 mb-3 to-search">
+              <h3>Home</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 home"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-home' class='text-warning'>&ltdiv class="blackBox home"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-home')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+
+            <li id="window" class="mt-3 mb-3 to-search">
+              <h3>Window</h3>
+              <!-- THE BOX -->
+              <div class="container d-flex border border-dark p-2 flex-wrap">
+                <div class="example ms-2 me-2 mt-2 window"></div>
+              </div>
+              <!-- THE CODE -->
+              <div class="row bg-saturday text-light mt-2 d-flex justify-content-between p-1">
+                <div class="col-md-11">
+                  <code id='code-window' class='text-warning'>&ltdiv class="blackBox window"&gt&lt/div&gt</code>
+                </div>
+                <div class="col-md-1">
+                  <button onclick="copyToClipboard('code-window')" class="btn badge bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy">Copy</button>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </section> 
+      </div>
+    </div>
+    <div class="p-5"></div>
+  </div>
+  <!-- CONTAINER END -->
+
+
+
+<!-- 
+<div class="example ms-2 me-2 slash-1"></div>
+                <div class="example ms-2 me-2 slash-2"></div>
+                <div class="example ms-2 me-2 slash-3"></div>
+                <div class="example ms-2 me-2 rev-slash-1"></div>
+                <div class="example ms-2 me-2 rev-slash-2"></div>
+                <div class="example ms-2 me-2 rev-slash-3"></div> -->
+
+
+
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- MY JS -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+  -->
+</body>
+</html>
