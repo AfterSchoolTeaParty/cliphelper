@@ -25,10 +25,6 @@
 	height: 1.5rem;
 	width: 1.5rem; 
 }
-#home-btn{
-	height: 2rem;
-	width: 2rem;
-}
 .isTitle{
 	font-family: 'Roboto', sans-serif;
 	font-family: 'Ubuntu Mono', monospace;
@@ -51,11 +47,15 @@
 .bg-sunday{
 	background-color: white;
 }
-
+#home-btn{
+	height: 2rem;
+	width: 2rem;
+}
 @media (min-width: 992px){
 	body{
 		min-height: 101vh;
 	}
+	
 	.over-y-true{
 		overflow-y: scroll !important;
 	}
@@ -64,5 +64,8 @@
 @media (max-width: 992px){
 	.tpad{
 		padding-top: 10px;
+	}
+	#footer{
+		visibility: hidden;
 	}
 }
