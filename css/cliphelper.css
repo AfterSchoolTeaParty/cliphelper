@@ -7,7 +7,7 @@
 .parallelogram{
 	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
-.rev-paralleogram{
+.rev-parallelogram{
 	clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
 }
 .trapezoid-up{
